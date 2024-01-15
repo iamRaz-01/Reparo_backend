@@ -75,6 +75,12 @@ private  UserService userService ;
         }
 
     }
+    @GetMapping("/reparo/user/check")
+    public ResponseEntity<ApiResponse>check(@RequestHeader("Cookie" ) String user ){
+            ApiResponse response =  new ApiResponse(ApiResponse.SUCCESS_CODE,ApiResponse.SUCCESS);
+            response.setData(user);
+            return ResponseEntity.ok(response);
+    }
 
 
 

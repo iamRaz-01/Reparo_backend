@@ -27,7 +27,7 @@ public class UserService extends UserPassword{
         User user =  new User();
         if(userRepository !=  null){
             user =  userRepository.findUserById(id);
-            if(user ==  null)throw  new ServiceException("User Not present");
+            if(user ==  null)throw  new ServiceException("Invalid User");
         }
         return user.getId()!= 0;
 
